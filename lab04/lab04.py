@@ -1,3 +1,6 @@
+from operator import add
+
+
 LAB_SOURCE_FILE = __file__
 
 
@@ -172,4 +175,5 @@ def count_palindromes(L):
     >>> count_palindromes(("Acme", "Madam", "Pivot", "Pip"))
     2
     """
-    return
+    from functools import reduce
+    return reduce(lambda a, _: a + 1, filter(lambda s: s[::-1] == s, map(lambda s: s.lower(), L)), 0)
