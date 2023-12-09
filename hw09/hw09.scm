@@ -37,4 +37,4 @@
       #f))
 
 (define (switch-factors n)
-  (switch (min (count is-factor n n) 3) '((1 ''one) (2 ''prime) (3 ''composite))))
+  (switch (min (count is-factor n n) 3) ((1 'one) (2 'prime) (3 'composite))))
